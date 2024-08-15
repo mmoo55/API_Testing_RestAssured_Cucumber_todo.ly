@@ -27,7 +27,7 @@ public class RequestStep {
     }
 
     @When("I send {word} {} with body")
-    public void iSendPOSTApiProjectsJsonWithBody(String method, String url, String body) {
+    public void iSendPOSTApiItemJsonWithBody(String method, String url, String body) {
         info.setUrl(ConfigurationEnv.host +replaceValueVariable(url)).setBody(body);
         if (varMap.containsKey("authToken")) {
             info.setHeaders("Token",  varMap.get("authToken"));
